@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f4f6;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .form {
+            background-color: #fff;
+            display: block;
+            padding: 1rem;
+            max-width: 350px;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            color: #000;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .input-container input,
+        .form button {
+            outline: none;
+            border: 1px solid #e5e7eb;
+            margin: 8px 0;
+        }
+
+        .input-container input {
+            background-color: #fff;
+            padding: 1rem;
+            padding-right: 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            width: 300px;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .input-container span {
+            display: grid;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            place-content: center;
+        }
+
+        .input-container span svg {
+            color: #9CA3AF;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .submit {
+            display: block;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            background-color: #4F46E5;
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            width: 100%;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .signup-link {
+            color: #6B7280;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-align: center;
+        }
+
+        .signup-link a {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form class="form" id="loginForm">
+            <div class="form-title">Login</div>
+            <div class="input-container">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="submit"> Login </button>
+            <div class="signup-link">
+                <span>Don't have an account? <a href="#">Sign up</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí puedes agregar la lógica de autenticación si es necesario
+
+            // Redirigir manualmente a otra página
+            window.location.href = 'http://127.0.0.1:5501/tortas.html'; // Cambia esta URL a la página que desees
+        });
+    </script>
+</body>
+</html>
